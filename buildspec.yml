@@ -3,19 +3,17 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing dependencies
+      - echo "Installing dependencies..."
   pre_build:
     commands:
-      - echo Pre-build phase started
+      - echo "Starting pre-build phase..."
   build:
     commands:
-      - echo Build started on `date`
-      - echo Zipping application
-      - zip -r app.zip app/ appspec.yml scripts/
+      - echo "Build phase running..."
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo "Build completed successfully!"
 
 artifacts:
   files:
-    - app.zip
+    - '**/*'
