@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /usr/share/nginx/html/app
+  - source: /app
+    destination: /usr/share/nginx/html
 hooks:
   BeforeInstall:
     - location: scripts/stop_server.sh
